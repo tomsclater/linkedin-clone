@@ -48,6 +48,14 @@ function Home() {
             </div>
           </div>
         </div>
+
+        <div className="relative xl:absolute w-80 h-80 xl:w-[650px] xl:h-[650px]">
+          <Image 
+            src="http://www.myownpaints.com/wp-content/uploads/2022/02/d58zfe6h3ycgq5l1ccjpkrtdn.svg" 
+            layout="fill" 
+            priority
+          />
+        </div>
       </main>
   </div>;
 }
