@@ -5,9 +5,14 @@ import GroupIcon from "@mui/icons-material/Group";
 import OndemandVideoSharpIcon from "@mui/icons-material/OndemandVideoSharp";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import Head from "next/head";
 
 function Home() {
-  return <div>
+    return <div className="space-y-10 relative">
+      <Head>
+        <title>LinkedIn</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <header className="flex justify-around items-center py-4">
           <div className="relative w-32 h-20 ">
               <Image src="http://www.myownpaints.com/wp-content/uploads/2022/02/Logo.svg" layout="fill" 
@@ -49,12 +54,9 @@ function Home() {
           </div>
         </div>
 
-        <div className="relative xl:absolute w-80 h-80 xl:w-[650px] xl:h-[650px]">
+        <div className="relative xl:absolute w-80 h-80 xl:w-[650px] xl:h-[650px] top-14 right-5">
           <Image 
-            src="http://www.myownpaints.com/wp-content/uploads/2022/02/d58zfe6h3ycgq5l1ccjpkrtdn.svg" 
-            layout="fill" 
-            priority
-          />
+            src="http://www.myownpaints.com/wp-content/uploads/2022/02/d58zfe6h3ycgq5l1ccjpkrtdn.svg" layout="fill" priority />
         </div>
       </main>
   </div>;
