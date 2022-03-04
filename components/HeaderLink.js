@@ -11,7 +11,17 @@ function HeaderLink({ Icon, text, avatar, feed, hidden, active }) {
     >
       {avatar ? <Icon className="!h-7 !w-7 lg:!-mb-1" /> : <Icon />}
 
-      <h4 className={`text-sm ${feed && "hidden lg:flex justify-center w-full mx-auto"}`}>{text}</h4>
+      <h4 
+        className={`text-sm ${
+        feed && "hidden lg:flex justify-center w-full mx-auto"
+        }`}
+      >
+        {text}
+      </h4>
+
+      {active && (
+        <span className="hidden lg:inline-flex h-0.5 w-[calc(100%+20px)] bg-black dark:bg-white rounded-t-full" />
+      )}
     </div>
   );
 }

@@ -35,6 +35,11 @@ function Header() {
         <HeaderLink Icon={NotificationsIcon} text="Notifications" feed />
         <HeaderLink Icon={Avatar} text="Me" feed avatar hidden />
         <HeaderLink Icon={AppsOutlinedIcon} text="Work" feed hidden />
+
+        {/* { Dark mode toggle } */}
+        <div 
+          className={`bg-gray-600 flex items-center px-0.5 rounded-full h-6 w-12 cursor-pointer flex-shrink-0`}
+        ></div>
         </div>
     </header>
   );
