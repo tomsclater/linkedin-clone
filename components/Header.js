@@ -38,8 +38,11 @@ function Header() {
 
         {/* { Dark mode toggle } */}
         <div 
-          className={`bg-gray-600 flex items-center px-0.5 rounded-full h-6 w-12 cursor-pointer flex-shrink-0`}
-        ></div>
+          className={`bg-gray-600 flex items-center px-0.5 rounded-full h-6 w-12 cursor-pointer flex-shrink-0 relative`}
+        >
+          <span className="absolute left-0">🌜</span>
+          <span className="absolute right-0.5">🌞</span>
+        </div>
         </div>
     </header>
   );
