@@ -8,13 +8,29 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import { Avatar } from "@mui/material";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 function Header() {
+    const [mounted, setMounted] = useState(false);
+    const { setTheme, resolvedTheme, theme } = useTheme();
+
+    // After mounting, we have access to the theme
+    useEffect(() => setMounted(true), []);
+
   return (
     <header>
         {/* { Left } */}
         <div className="flex items-center space-x-2 w-full max-w-xs">
-            <Image src="https://rb.gy/bizvqj" width={45} height={45} />
+            {mounted && (
+              <>
+                {resolvedTheme === "dark" ? (
+                  <Image src="https://rb.gy/bizvqj" width={45} height={45} />
+                ) : (
+                  <Image src="https://rb.gy/dpmd9s" width={55} height={55} />
+                )}
+              </>
+            )}
 
             <div className="flex items-center space-x-1 dark:md:bg-gray-700 pt-2.5 px-4 rounded w-full">
                 <SearchRoundedIcon/>
@@ -41,6 +57,7 @@ function Header() {
           className={`bg-gray-600 flex items-center px-0.5 rounded-full h-6 w-12 cursor-pointer flex-shrink-0 relative`}
         >
           <span className="absolute left-0">🌜</span>
+          {/* { motion div } */}
           <span className="absolute right-0.5">🌞</span>
         </div>
         </div>
