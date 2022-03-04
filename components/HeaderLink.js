@@ -1,4 +1,4 @@
-function HeaderLink({ Icon, text, avatar, feed, hidden }) {
+function HeaderLink({ Icon, text, avatar, feed, hidden, active }) {
   return (
     <div 
       className={`${
@@ -7,7 +7,7 @@ function HeaderLink({ Icon, text, avatar, feed, hidden }) {
         feed
         ? "text-black/60 hover:text-black dark:text-white/75 dark:hover:text-white lg:-mb-1.5 space-y-1" 
         : "text-gray-500 hover:text-gray-700"
-      }`}
+      } ${active && "!text-black dark:!text-white"}`}
     >
       {avatar ? <Icon className="!h-7 !w-7 lg:!-mb-1" /> : <Icon />}
 
