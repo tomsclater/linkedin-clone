@@ -26,6 +26,7 @@ function Home({ providers }) {
                 <HeaderLink Icon={OndemandVideoSharpIcon} text="Learning" />
                 <HeaderLink Icon={BusinessCenterIcon} text="Jobs" />
             </div>
+
             {Object.values(providers).map((provider) => (
             <div key={provider.name}>
               <div className="pl-4">
