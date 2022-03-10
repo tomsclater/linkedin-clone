@@ -5,7 +5,7 @@ import Sidebar from '../components/Sidebar';
 
 export default function Home() {
   return (
-    <div className="bg-gray-900">
+    <div className="bg-[#F3F2EF] dark:bg-black dark:text-white h-screen overflow-y-scroll md:space-y-6">
       <Head>
         <title>Feed | LinkedIn</title>
         <link rel="icon" href="/favicon.ico" />
