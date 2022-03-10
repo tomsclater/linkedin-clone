@@ -34,7 +34,7 @@ function Header() {
                 {resolvedTheme === "dark" ? (
                   <Image src="https://rb.gy/bizvqj" width={45} height={45} />
                 ) : (
-                  <Image src="http://www.myownpaints.com/wp-content/uploads/2022/03/LI-Bug.svg.original.svg" width={55} height={55} />
+                  <Image src="https://www.myownpaints.com/wp-content/uploads/2022/03/LI-Bug.svg.original.svg" width={55} height={55} />
                 )}
               </>
             )}
