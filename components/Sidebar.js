@@ -6,6 +6,7 @@ import AddRoundedIcon from "@mui/icons-material/AddRounded"
 
 
 function Sidebar() {
+    const { data: session } = useSession();
   return (
     <div className="space-y-2 min-w-max max-w-lg">
         {/* {Top} */}
