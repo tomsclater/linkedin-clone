@@ -7,6 +7,7 @@ import AddRoundedIcon from "@mui/icons-material/AddRounded"
 
 function Sidebar() {
     const { data: session } = useSession();
+
   return (
     <div className="space-y-2 min-w-max max-w-lg">
         {/* {Top} */}
@@ -16,12 +17,12 @@ function Sidebar() {
             </div>
             <Avatar
                 // onClick={signOut}
-                src="http://www.myownpaints.com/wp-content/uploads/2022/03/44801711.png"
+                src={session?.user?.image}
                 className="!h-14 !w-14 !border-2 !absolute !top-4 !cursor-pointer"
             />
             <div className="mt-5 py-4 space-x-0.5">
-                <h4 className="hover:underline decoration-purple-700 underline-offset-1 cursor-pointer">Thomas Sclater</h4>
-                <p className="text-black/60 dark:text-white/75 text-sm">tomsclater@live.com</p>
+                <h4 className="hover:underline decoration-purple-700 underline-offset-1 cursor-pointer">{session?.user?.name}</h4>
+                <p className="text-black/60 dark:text-white/75 text-sm">{session?.user?.email}</p>
             </div>
             <div className="hidden md:inline text-left dark:text-white/75 text-sm">
                 <div className="font-medium sidebarButton space-y-0.5">
