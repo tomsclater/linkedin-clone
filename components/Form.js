@@ -5,7 +5,7 @@ function Form() {
 
     console.log(input);
 
-  return <form>
+  return <form className=" flex flex-col relative">
         <textarea 
             rows="4" 
             placeholder="What do you want to talk about?"
@@ -13,12 +13,14 @@ function Form() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
         />
+        <div>
         <button
-                  className="text-blue-700 dark:text-white font-semibold rounded border border-blue-700 px-5 py-1.5 transition-all hover:border-2"
-                  onClick={(e) => setInput(e.target.value += "#")}
+                  className="text-blue-700 dark:text-white font-semibold rounded border border-blue-700 px-5 py-1.5 transition-all hover:border-2 inputButton"
+                //   onClick=""
                 >
                   Add hashtag
         </button>
+        </div>
   </form>;
 }
 
