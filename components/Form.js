@@ -1,12 +1,25 @@
+import { useSession } from "next-auth/react";
 import { useState } from "react";
 
 function Form() {
     const [input, setInput] = useState("")
+    const { data: session } = useSession();
 
     console.log(input);
 
     const uploadPost = async (e) => {
         e.preventDefault();
+
+        const response = await fetch("/api/posts", {
+            method: "POST",
+            body: JSON.stringify({
+                input: input,
+                username: session.user.name,
+                email: session.user.email,
+                userImg: session.user.image,
+                createdAt: new Date().toString()
+            })
+        })
     };
 
     const addHashtag = async (e) => {
