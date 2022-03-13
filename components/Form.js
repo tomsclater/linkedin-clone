@@ -5,7 +5,14 @@ function Form() {
 
     console.log(input);
 
-    const uploadPost = () => {};
+    const uploadPost = async (e) => {
+        e.preventDefault();
+    };
+
+    const addHashtag = async (e) => {
+        setInput(e.target.value + "#");
+        e.preventDefault();
+    };
 
   return <form className=" flex flex-col relative space-y-2 text-black/80 dark:text-white/75">
         <textarea 
@@ -18,7 +25,8 @@ function Form() {
         <div>
         <button
                   className="text-blue-700 dark:text-white font-semibold rounded border border-blue-700 px-5 py-1.5 transition-all hover:border-2 inputButton"
-                //   onClick=""
+                  onClick={addHashtag}
+                //   onChange={(e) => setInput(e.target.value += "#")}
                 >
                   Add hashtag
         </button>
