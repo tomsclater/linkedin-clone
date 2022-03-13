@@ -10,7 +10,7 @@ import Modal from '../components/Modal';
 import Sidebar from '../components/Sidebar';
 import { connectToDatabase } from '../util/mongodb';
 
-export default function Home() {
+export default function Home({ posts }) {
   const [modalOpen, setModalOpen] = useRecoilState(modalState);
   const [modalType, setModalType] = useRecoilState(modalTypeState);
   const router = useRouter()
@@ -35,7 +35,7 @@ export default function Home() {
       <main className="flex justify-center gap-x-5 px-4 sm:px-12">
         <div className="flex flex-col md:flex-row gap-5">
           <Sidebar/>
-          <Feed/>
+          <Feed posts={posts} />
         </div>
           {/* {Widgets} */}
           <AnimatePresence>
@@ -80,7 +80,7 @@ export async function getServerSideProps(context) {
         email: post.email,
         userImg: post.userImg,
         createdAt: post.createdAt,
-      }))
+      })),
     },
   };
 }
