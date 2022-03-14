@@ -46,9 +46,9 @@ function Post({ post, modalPost }) {
       {post.input && (
           <div className="px-2.5 break-all md:break-normal">
               {modalPost || showInput ? (
-                  <p>{post.input}</p>
+                  <p onClick={() => setShowInput(false)}>{post.input}</p>
               ): (
-                  <p>
+                  <p onClick={() => setShowInput(true)}>
                       {truncate(post.input,150)}
                   </p>
               )}
