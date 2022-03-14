@@ -15,6 +15,8 @@ import { useSession } from "next-auth/react";
 
 function Post({ post, modalPost }) {
     const [modalOpen, setModalOpen] = useRecoilState(modalState);
+    const [modalType, setModalType] = useRecoilState(modalTypeState);
+    const [postState, setPostState] = useRecoilState(getPostState);
     const [showInput, setShowInput] = useState(false);
 
     const truncate = (string, n) =>
@@ -53,6 +55,28 @@ function Post({ post, modalPost }) {
                   </p>
               )}
           </div>
+      )}
+
+      {/* This would be where the photo would go but we're not using photo URL */}
+
+      {/* {post.photoUrl && !modalPost && (
+        <img src={post.photoUrl} alt="" className="w-full cursor-pointer" onClick={() => {
+            setModalOpen(true);
+            setModalType("gifYouUp");
+            setPostState(post);
+          }} 
+        /> */}
+
+      {/* I'm changing it to this temporarily */}
+        
+         {post.userImg} && !modalPost && (
+        <img src="{post.userImg}" alt="" className="w-full cursor-pointer" onClick={() => {
+            setModalOpen(true);
+            setModalType("gifYouUp");
+            setPostState(post);
+          }} 
+        />
+
       )}
   </div>;
 }

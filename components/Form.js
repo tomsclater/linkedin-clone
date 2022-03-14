@@ -6,6 +6,7 @@ import { handlePostState } from "../atoms/postAtom";
 
 function Form() {
     const [input, setInput] = useState("")
+    const [photoUrl, setPhotoUrl] = useState("")
     const { data: session } = useSession();
     const [modalOpen, setModalOpen] = useRecoilState(modalState);
     const [handlePost, setHandlePost] = useRecoilState(handlePostState);
@@ -49,6 +50,8 @@ function Form() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
             />
+
+            <input type="text" placeholder="Add a photo URL (optional)" className="bg-transparent focus:outline-none truncate max-w-xs md:max-w-sm dark:placeholder-white/75" value={photoUrl} onChange={(e) => setPhotoUrl(e.target.value)} />
             <div>
             <button
                     className="text-blue-700 dark:text-white font-semibold rounded border border-blue-700 px-5 py-1.5 transition-all hover:border-2 inputButton"
