@@ -57,26 +57,15 @@ function Post({ post, modalPost }) {
           </div>
       )}
 
-      {/* This would be where the photo would go but we're not using photo URL */}
-
-      {/* {post.photoUrl && !modalPost && (
+      {post.photoUrl && !modalPost && (
         <img src={post.photoUrl} alt="" className="w-full cursor-pointer" onClick={() => {
-            setModalOpen(true);
-            setModalType("gifYouUp");
-            setPostState(post);
-          }} 
-        /> */}
-
-      {/* I'm changing it to this temporarily */}
-        
-         {post.userImg} && !modalPost && (
-        <img src="{post.userImg}" alt="" className="w-full cursor-pointer" onClick={() => {
             setModalOpen(true);
             setModalType("gifYouUp");
             setPostState(post);
           }} 
         />
 
+     
       )}
   </div>;
 }
