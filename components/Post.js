@@ -14,6 +14,7 @@ import { modalState, modalTypeState } from "../atoms/modalAtom";
 import { useSession } from "next-auth/react";
 
 function Post({ post, modalPost }) {
+  const { data: session } = useSession();
     const [modalOpen, setModalOpen] = useRecoilState(modalState);
     const [modalType, setModalType] = useRecoilState(modalTypeState);
     const [postState, setPostState] = useRecoilState(getPostState);
@@ -22,6 +23,8 @@ function Post({ post, modalPost }) {
 
     const truncate = (string, n) =>
     string?.length > n ? string.substr(0, n - 1) + "...see more" : string;
+
+    const deletePost = () => {};
 
   return <div className={`bg-white dark:bg-[#1D2226] ${
       modalPost ? "rounded-r-lg": "rounded-lg"
@@ -85,6 +88,21 @@ function Post({ post, modalPost }) {
             )}
 
             <h4>Like</h4>
+          </button>
+        )}
+
+        {session?.user?.email === post.email ? (
+          <button
+            className="postButton focus:text-red-400"
+            onClick={deletePost}
+          >
+            <DeleteRoundedIcon />
+            <h4>Delete post</h4>
+          </button>
+        ) : (
+          <button className="postButton ">
+            <ReplyRoundedIcon className="-scale-x-100" />
+            <h4>Share</h4>
           </button>
         )}
       </div>
