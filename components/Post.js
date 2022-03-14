@@ -15,6 +15,10 @@ import { useSession } from "next-auth/react";
 
 function Post({ post, modalPost }) {
     const [modalOpen, setModalOpen] = useRecoilState(modalState);
+    const [showInput, setShowInput] = useState(false);
+
+    const truncate = (string, n) =>
+    string?.length > n ? string.substr(0, n - 1) + "...see more" : string;
 
   return <div className={`bg-white dark:bg-[#1D2226] ${
       modalPost ? "rounded-r-lg": "rounded-lg"
@@ -38,6 +42,18 @@ function Post({ post, modalPost }) {
           </IconButton>
         )}
       </div>
+
+      {post.input && (
+          <div className="px-2.5 break-all md:break-normal">
+              {modalPost || showInput ? (
+                  <p>{post.input}</p>
+              ): (
+                  <p>
+                      {truncate(post.input,150)}
+                  </p>
+              )}
+          </div>
+      )}
   </div>;
 }
 
