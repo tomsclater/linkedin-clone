@@ -1,6 +1,6 @@
 function Post({post}) {
   return <div>
-      <img src="" alt="" />
+      <img src={post.userImg} alt="" />
       <p>{post.input}</p>
   </div>;
 }
