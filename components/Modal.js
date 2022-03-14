@@ -7,7 +7,6 @@ import { Avatar } from "@mui/material";
 import Form from "./Form";
 import { useRecoilValue } from "recoil";
 import { getPostState } from "../atoms/postAtom";
-// import { getPostState } from "../atoms/postAtom";
 import Post from "./Post";
 
 const dropIn = {

@@ -18,6 +18,7 @@ function Post({ post, modalPost }) {
     const [modalType, setModalType] = useRecoilState(modalTypeState);
     const [postState, setPostState] = useRecoilState(getPostState);
     const [showInput, setShowInput] = useState(false);
+    const [liked, setLiked] = useState(false);
 
     const truncate = (string, n) =>
     string?.length > n ? string.substr(0, n - 1) + "...see more" : string;
@@ -64,9 +65,29 @@ function Post({ post, modalPost }) {
             setPostState(post);
           }} 
         />
-
-     
       )}
+
+      <div>
+        {modalPost ? (
+          <button className="postButton">
+            <CommentOutlinedIcon/>
+            <h4>Comment</h4>
+          </button>
+        ) : (
+          <button
+            className={`postButton ${liked && "text-blue-500"}`}
+            onClick={() => setLiked(!liked)}
+          >
+            {liked ? (
+              <ThumbUpOffAltRoundedIcon className="-scale-x-100" />
+            ) : (
+              <ThumbUpOffAltOutlinedIcon className="-scale-x-100" />
+            )}
+
+            <h4>Like</h4>
+          </button>
+        )}
+      </div>
   </div>;
 }
 
