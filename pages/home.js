@@ -17,7 +17,7 @@ function Home({ providers }) {
       <header className="flex justify-around items-center py-4">
           <div className="relative w-32 h-20 ">
               <Image 
-                src="https://rb.gy/vtbzlp" 
+                src="https://www.myownpaints.com/wp-content/uploads/2022/02/Logo.svg" 
                 layout="fill" 
                 objectFit="contain" 
               />
