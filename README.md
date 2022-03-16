@@ -9,15 +9,25 @@ https://linkedin-clone-henna-eta.vercel.app/
 # Tutorial
 
 https://www.youtube.com/watch?v=JGhuAJKGRN0&loop=0
+
 This build contains the following:
+
 FRAMER MOTION (animated theme toggler)
+
 TAILWIND CSS
+
 NEXTJS (Middleware beta)
+
 MONGODB
+
 NEXTAUTH (MongoDB adapter ps Google Auth)
+
 VERCEL HOSTING (How to deploy)
+
 RECOIL (State management within React)
-+ MORE!
+
++ MORE
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
