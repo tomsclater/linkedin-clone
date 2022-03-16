@@ -20,7 +20,7 @@ Next.JS (w/ Middleware React Framework)
 
 MongoDB
 
-NextAuth (MongoDB adapter using Google Auth, more could be implemented)
+NextAuth (MongoDB adapter using Google Auth)
 
 Vercel Hosting
 
