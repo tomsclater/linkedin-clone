@@ -16,7 +16,7 @@ Framer Motion
 
 Tailwind CSS
 
-Next.JS (w/ Middleware Beta React Framework)
+Next.JS (w/ Middleware React Framework)
 
 MongoDB
 
