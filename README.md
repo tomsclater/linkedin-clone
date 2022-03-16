@@ -1,3 +1,11 @@
+# Visit the deployed app
+
+https://linkedin-clone-henna-eta.vercel.app/
+
+# Preview
+
+![image](https://user-images.githubusercontent.com/44801711/158530794-243530c1-703c-487b-a622-4939cc867c9f.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
