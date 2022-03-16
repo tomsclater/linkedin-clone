@@ -12,21 +12,21 @@ https://www.youtube.com/watch?v=JGhuAJKGRN0&loop=0
 
 This build contains the following:
 
-FRAMER MOTION (animated theme toggler)
+Framer Motion
 
-TAILWIND CSS
+Tailwind CSS
 
-NEXTJS (Middleware beta)
+Next.JS (w/ Middleware Beta React Framework)
 
-MONGODB
+MongoDB
 
-NEXTAUTH (MongoDB adapter ps Google Auth)
+NextAuth (MongoDB adapter using Google Auth, more could be implemented)
 
-VERCEL HOSTING (How to deploy)
+Vercel Hosting
 
-RECOIL (State management within React)
+Recoil (State management within React)
 
-+ MORE
++ More
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
