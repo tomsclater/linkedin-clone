@@ -9,28 +9,29 @@ import Head from "next/head";
 import { getProviders, signIn } from "next-auth/react";
 
 function Home({ providers }) {
-    return <div className="space-y-10 relative">
+  return (
+    <div className="space-y-10 relative">
       <Head>
         <title>LinkedIn</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="flex justify-around items-center py-4">
-          <div className="relative w-32 h-20 ">
-              <Image 
-                src="https://www.myownpaints.com/wp-content/uploads/2022/02/Logo.svg" 
-                layout="fill" 
-                objectFit="contain" 
-              />
+        <div className="relative w-32 h-20 ">
+          <Image
+            src="https://www.myownpaints.com/wp-content/uploads/2022/02/Logo.svg"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+        <div className="flex items-center sm:divide-x divide-gray-300">
+          <div className="hidden sm:flex space-x-8 pr-4">
+            <HeaderLink Icon={ExploreIcon} text="Discover" />
+            <HeaderLink Icon={GroupIcon} text="People" />
+            <HeaderLink Icon={OndemandVideoSharpIcon} text="Learning" />
+            <HeaderLink Icon={BusinessCenterIcon} text="Jobs" />
           </div>
-          <div className="flex items-center sm:divide-x divide-gray-300">
-            <div className="hidden sm:flex space-x-8 pr-4">
-                <HeaderLink Icon={ExploreIcon} text="Discover" />
-                <HeaderLink Icon={GroupIcon} text="People" />
-                <HeaderLink Icon={OndemandVideoSharpIcon} text="Learning" />
-                <HeaderLink Icon={BusinessCenterIcon} text="Jobs" />
-            </div>
 
-            {Object.values(providers).map((provider) => (
+          {Object.values(providers).map((provider) => (
             <div key={provider.name}>
               <div className="pl-4">
                 <button
@@ -42,7 +43,7 @@ function Home({ providers }) {
               </div>
             </div>
           ))}
-          </div>
+        </div>
       </header>
 
       <main className="flex flex-col xl:flex-row items-center max-w-screen-lg mx-auto">
@@ -67,14 +68,15 @@ function Home({ providers }) {
         </div>
 
         <div className="relative xl:absolute w-80 h-80 xl:w-[650px] xl:h-[650px] top-14 right-5">
-          <Image 
-            src="https://www.myownpaints.com/wp-content/uploads/2022/02/d58zfe6h3ycgq5l1ccjpkrtdn.svg" 
-            layout="fill" 
-            priority 
+          <Image
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            layout="fill"
+            priority
           />
         </div>
       </main>
-  </div>;
+    </div>
+  );
 }
 
 export default Home;
